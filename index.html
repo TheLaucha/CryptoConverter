@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Converter</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/loader.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/cripto-icon.ico">
+  </head>
+  <body>
+    <main class="container">
+      <article class="select-container">
+        <header>
+          <img src="./images/cripto-img.png"></img>
+          <h1>Crypto Converter</h1>
+        </header>
+        <form>
+          <label for="fiat-options">Ingrese su moneda</label>
+          <select name="fiat-options" id="fiat-options">
+            <option value="USD">Dolar Americano</option>
+            <option value="EUR">Euro</option>
+            <option value="ARS">Peso Argentino</option>
+          </select>
+          <label for="crypto-options">Elija su criptomoneda</label>
+          <select name="crypto-options" id="crypto-options">
+          </select>
+          <button class="button-56" type="submit">Calcular</button>
+        </form>
+      </article>
+      <div>
+        <div class="lds-roller">
+          <div></div>
+          <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+      <article class="response-container oculto">
+        <header>
+          <h2 class="currency">$50.000</h2>
+          <div class="symbols">
+            <span class="from"></span> 
+            <img class="arrow" src="https://img.icons8.com/fluency-systems-regular/22/ffffff/arrow.png"/>
+            <span class="to"></span>
+          </div>
+        </header>
+        <p>Maximo del dia: <span class="high-day"></span></p>
+        <p>Minimo del dia: <span class="low-day"></span></p>
+        <p>Variacion diaria: <span class="changepct"></span></p>
+      </article>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

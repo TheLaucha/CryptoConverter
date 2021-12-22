@@ -1,0 +1,219 @@
+:root {
+  --softBlue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --veryDarkBlue-Bg: hsl(217, 54%, 11%);
+  --veryDarkBlue-cardBg: hsl(216, 50%, 16%);
+  --veryDarkBlue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background: rgb(20, 37, 61);
+  background: linear-gradient(175deg, rgba(20, 37, 61, 1) 0%, rgba(74, 147, 218, 1) 100%);
+  background-position: center;
+  /* font-family: 'Staatliches', cursive; */
+  color: var(--white);
+}
+
+button,
+label,
+option {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 5fr 1fr 5fr;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem 0;
+}
+
+.select-container,
+.response-container {
+  height: auto;
+  width: 80%;
+  padding: 2rem;
+}
+
+/* ==== SELECT CONTAINER ==== */
+
+.select-container header {
+  margin-bottom: 2rem;
+}
+
+.select-container header img {
+  max-width: 100%;
+}
+
+.select-container header h1 {
+  font-size: 3rem;
+  font-family: "Staatliches", cursive;
+  color: var(--white);
+}
+
+.select-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-container form label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.select-container form select {
+  padding: 0.4rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  box-shadow: 5px 5px 1px 0px rgba(10, 10, 10, 0.75);
+  -webkit-box-shadow: 5px 5px 1px 0px rgba(10, 10, 10, 0.75);
+  -moz-box-shadow: 5px 5px 1px 0px rgba(10, 10, 10, 0.75);
+}
+
+.select-container form option {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+/* ==== RESPONSE CONTAINER ==== */
+
+.response-container {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--veryDarkBlue-cardBg);
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.response-container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.response-container header .symbols {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  color: var(--white);
+  gap: 1rem;
+}
+
+.response-container header h2 {
+  font-family: "Staatliches", cursive;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 2rem;
+}
+
+.oculto {
+  display: none;
+}
+
+/* ==== BUTTON STYLES ==== */
+
+.button-56 {
+  align-items: center;
+  background-color: var(--softBlue);
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 700;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: var(--white);
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .select-container form label,
+  .select-container form option {
+    font-size: 1.3rem;
+  }
+
+  .select-container form select {
+    font-size: 1.1rem;
+  }
+
+  .response-container {
+    font-size: 1rem;
+  }
+
+  .response-container header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
